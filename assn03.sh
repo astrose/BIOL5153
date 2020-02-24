@@ -15,7 +15,10 @@ stc-mbpro16:assn03 labuser$ #for i in *.tre; do echo $i;done >tree_fasta.txt
 stc-mbpro16:assn03 labuser$ #for i in *.fasta; do echo $i;done >>tree_fasta.txt
 stc-mbpro16:assn03 labuser$ #cut -c -9 tree_fasta.txt > tree_fasta_num.txt|sort -n tree_fasta_num.txt| uniq -u| wc -l
 stc-mbpro16:assn03 labuser$ #assn03-7
-stc-mbpro16:assn03 labuser$ 
+stc-mbpro16:assn03 labuser$ #All jobs were successful, none were unsuccessful
+#assn03-8
+#gene_trees $for i in *.fasta;do test -e ${i%.fasta}_raxml.tre || generate_pbs.py $i '>' ${i%.fasta}.
+pbs;done
 
 
 
