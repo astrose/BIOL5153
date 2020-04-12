@@ -37,7 +37,7 @@ with open (args.gff,"r") as gff_file:
 	with open(args.fasta, "r") as fasta_file:
 		reader=csv.reader(gff_file, delimiter="\t")
 	
-	
+	#extract CDS
 	for line in reader:
 		if not line:
 			continue
