@@ -10,5 +10,8 @@
 #Ch2 exercise
 #Ch3 exercise
 #Ch4 exercise
+#Ch5 exercise
+#Ch7 ecercise
+#Ch9 exercise
 #In-Class Assn 1
 
