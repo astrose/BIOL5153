@@ -34,15 +34,16 @@ for match in re.finditer(pattern,concert,re.I):
 
 # In[159]:
 
+#In Class exercise. Other way to Do this
 
-for match in re.finditer(pattern,concert,re.I):
-    start = match.start()
-    end = match.end()
-    length = end-start
-    print("\t" match.group() + str(length) + str(start)+ str(end))
-
+kath_find1 = re.compile((k|c)ath[a-z]*r(y|i)n{1,}e*, re.I)
+kath_find2 = re.compile([kc]ath[aeiu]*r[yi]n{1,}e*, re.I)
 
 # 
+for math in finditer(kath_find1, cat):
+	start = match.start()
+end
+	print("\t".join([match.group(0), str(match.start()), str(match.end()), str(match.end() - match.start)])
 
 # In[160]:
 

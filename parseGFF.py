@@ -1,6 +1,7 @@
 # /usr/bin/env python3
 import argparse
 import csv
+import re
 from Bio import SeqIO
 
 #create variable parser
@@ -61,6 +62,23 @@ def get_gc_content(gene_list, sig_figs=1):
 #for every line in gene_list, print the gc content
 for i in gene_list:
 	print("The GC content is " + str(get_gc_content(i)))
+
+#extract thhis feature from the genome
+#extract the gene name
+if feature_type=="CDS":
+	feature_seq = genome[start-1:end]
+	
+	re.compile("Gene\s+(\S+)\s+",attributes)
+	print(attributes)
+	print(feature_seq)
+	feature_GC = gc(feature_seq, 2)
+	print (GCround)
+
+
+if
+else: feature_type = line 
+
+
 
 #close file
 gff_file.close()
