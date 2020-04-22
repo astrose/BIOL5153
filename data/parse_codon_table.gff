@@ -1,0 +1,41 @@
+#! /usr/bin/env python
+
+
+import csv
+from collections import defaultdict
+
+#declare the dictionary; key = codon, value - songle-letter AA
+codon2aa = defaultdict(dict)
+
+#read tab-delimited codon file, line by line
+with open('codon.tab', 'r') as codon_file:
+
+	#create a csv reader object
+	reader= csv.reader(codon_file, delimiter="\t"
+	for line in reader:
+		#skip blank lines
+		if not line:
+			continue
+		#skip comment (
+		elif line[0].startswith("#")
+			continue
+	
+
+		else:
+			#print 
+			codon2aa[line[0]] = line[2]
+
+#loop over dictionary
+
+for codon, aa in codon2aa.items():
+	print("'" + codon + "'" +  ":" + "'" + aa + "'", endswith=", ")
+	
+#declare dictionary we could paste into code
+
+#now we can copy and paste the results into our parse gff
+
+#we've extracted the gene name, extract exon number
+<Insert code>
+#have dictionary we define, think where to declare it, call it cds (the full set
+#of exons for the gene) where key=gene name, value=another dictionary (key=exon number, value=sequence of that exon)
+
