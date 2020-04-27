@@ -50,23 +50,36 @@ def parse_gff(genome):
 					feature_seq = genome[start-1:end]
 
 					# reverse complement feature_seq if necessary
+					
 					if strand == '-':
-						reverse_c = feature_seq.reverse_complement()
+						feature_seq=reverse_c = revcomp(feature_seq)
 
 						# extract the gene name
-						match = re.search("Gene\s+(\S+)\s+", attributes)
-						gene_name = match.group(1)
+						match_1 = re.search("Gene\s+(\S+)\s+", attributes)
+						gene_name = match_1.group(1)
 
 						# extract the exon number
-						match = re.search("exon\s+(\S+)", attributes)
-						if match:
-							exon_number = match.group(1)
-
+						match_2 = re.search("exon\s+(\d+)", attributes)
+						if match_2:
+							exon_number = match_2.group(1)
+							genes_with_introns[gene_name][exon_number]=feature_seq
 							# dictionary called cds where, key = gene name, value = another dictionary (key = exon number, value = sequence of that exon)
+						
+						#single introns
+						#
+						else:
+							print(">" + organism + gene_name)
+							print(geature_seq)
+
+
+
+
+
 							cds_dict = defaultdict(dict)
 							exon_dict = defaultdict(dict)
 							exon_dict[exon_number] = feature_seq
 							cds_dict[gene_name] = exon_dict
+
 					# print FASTA format
 						for i,j in exon_dict.items():
 							for k,l in cds_dict.items():
@@ -74,6 +87,15 @@ def parse_gff(genome):
 								print(j)
 								print("Reverse complement for sequence: ")
 								print(revrse_c)
+
+	#print now looping over dictionary
+	print()
+	print("now looping over our dictionary")
+
+	#Loop over genes genese_with_introns dictionary and oprint the CDS sequences
+	for gene_id, length in genes_with_intront():
+		print(gene_id, length)
+
 
 						#print(">" + organism + "_" + gene_name)
 						#print(feature_seq)
