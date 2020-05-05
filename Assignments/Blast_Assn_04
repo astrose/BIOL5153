@@ -1,0 +1,127 @@
+Last login: Wed Feb 19 08:28:15 on console
+arsc-7051419:~ astrose$ ssh astrose@trestles.uark.edu
+astrose@trestles.uark.edu's password: 
+Last login: Wed Feb 12 09:09:23 2020 from zenlb4
+Currently Loaded Modulefiles:
+  1) os/el6
+tres-l1:astrose:~$ cd /storage/astrose/watermelon_files
+tres-l1:astrose:/storage/astrose/watermelon_files$ ls -al
+total 1844
+drwxr-xr-x 5 astrose jpummil   4096 Feb 17 09:51 .
+drwxr-xr-x 4 astrose jpummil   4096 Feb 17 09:42 ..
+-rw-r--r-- 1 astrose jpummil  12328 Feb 17 09:42 all_the_genes.fasta
+-rw-r--r-- 1 astrose jpummil   1408 Feb 17 09:42 contents.txt
+-rw-r--r-- 1 astrose jpummil   8196 Feb 17 09:42 .DS_Store
+-rw------- 1 astrose jpummil  12328 Feb 17 09:42 genes.fsa
+drwxr-xr-x 2 astrose jpummil   4096 Feb 17 09:42 mt_genomes
+-rw-r--r-- 1 astrose jpummil  13767 Feb 17 09:42 not_rps.gff
+-rw-r--r-- 1 astrose jpummil  12328 Feb 17 09:42 NuAA
+-rw-r--r-- 1 astrose jpummil  40096 Feb 17 09:42 out.fa
+-rw-r--r-- 1 astrose jpummil   2204 Feb 17 09:42 rps.gff
+drwxr-xr-x 2 astrose jpummil   4096 Feb 17 09:42 watermelon_aa
+-rw------- 1 astrose jpummil 379432 Feb 17 09:42 watermelon.fsa
+-rw-r--r-- 1 astrose jpummil    257 Feb 17 09:51 watermelon.fsa.nhr
+-rw-r--r-- 1 astrose jpummil     96 Feb 17 09:51 watermelon.fsa.nin
+-rw-r--r-- 1 astrose jpummil  94811 Feb 17 09:51 watermelon.fsa.nsq
+-rw------- 1 astrose jpummil 623302 Feb 17 09:42 watermelon.gbf
+-rw------- 1 astrose jpummil    228 Feb 17 09:42 watermelon_genes.mac.txt
+-rw------- 1 astrose jpummil 379432 Feb 17 09:42 watermelon_genome.fa
+-rw------- 1 astrose jpummil  15971 Feb 17 09:42 watermelon.gff
+-rw------- 1 astrose jpummil 161083 Feb 17 09:42 watermelon.gff.docx
+-rw------- 1 astrose jpummil  20579 Feb 17 09:42 watermelon.mac.gff
+drwxr-xr-x 2 astrose jpummil   4096 Feb 17 09:42 watermelon_nt
+-rw------- 1 astrose jpummil   4958 Feb 17 09:42 watermelon_perfect_repeats.gff
+-rw-r--r-- 1 astrose jpummil  27541 Feb 17 09:42 watrmelon
+tres-l1:astrose:/storage/astrose/watermelon_files$ module load blast/2.6.0+
+tres-l1:astrose:/storage/astrose/watermelon_files$ blast n-help
+-bash: blast: command not found
+tres-l1:astrose:/storage/astrose/watermelon_files$ blastn -help|less
+tres-l1:astrose:/storage/astrose/watermelon_files$ blastn -query watermrlon_nt/mad4L.fasta -db watermelon.fsa
+Command line argument error: Argument "query". File is not accessible:  `watermrlon_nt/mad4L.fasta'
+tres-l1:astrose:/storage/astrose/watermelon_files$ blastn -query watermelon_nt/mad4L.fasta -db watermelon.fsa
+Command line argument error: Argument "query". File is not accessible:  `watermelon_nt/mad4L.fasta'
+tres-l1:astrose:/storage/astrose/watermelon_files$ blastn -query watermelon_nt/nad4L.fasta -db watermelon.fsa
+BLASTN 2.6.0+
+
+
+Reference: Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb
+Miller (2000), "A greedy algorithm for aligning DNA sequences", J
+Comput Biol 2000; 7(1-2):203-14.
+
+
+
+Database: watermelon.fsa
+           1 sequences; 379,236 total letters
+
+
+
+Query= Citrullus_nad4L
+
+Length=303
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  watermelon [organism=Citrullus lanatus] [common=watermelon] [cu...  560     2e-161
+
+
+> watermelon [organism=Citrullus lanatus] [common=watermelon] [cultivar=Florida 
+giant] [molecule=DNA] [location=mitochondrion] 
+[topology=circular] Citrullus lanatus mitochondrion, complete 
+genome
+Length=379236
+
+ Score = 560 bits (303),  Expect = 2e-161
+ Identities = 303/303 (100%), Gaps = 0/303 (0%)
+ Strand=Plus/Minus
+
+Query  1       ACGGATCCTATCAAATATTTCACATTTTCTATGATCATCTCTATTTTAGGTATTCGGGGA  60
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  366432  ACGGATCCTATCAAATATTTCACATTTTCTATGATCATCTCTATTTTAGGTATTCGGGGA  366373
+
+Query  61      ATCCTCCTTAATAGACGAAATATTCCTATTATGTCAATGCCAATTGAATCAATGTTATTA  120
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  366372  ATCCTCCTTAATAGACGAAATATTCCTATTATGTCAATGCCAATTGAATCAATGTTATTA  366313
+
+Query  121     GCTGTGAATTCGAACTTTTTGGTATTTTCCGTTTCTTCGGATGATATGATGGGTCAATCA  180
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  366312  GCTGTGAATTCGAACTTTTTGGTATTTTCCGTTTCTTCGGATGATATGATGGGTCAATCA  366253
+
+Query  181     TTTGCTTCATTGGTTCCAACGGTGGCAGCTGCGGAATCCGCTATTGGGTTAGCCATTTTC  240
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  366252  TTTGCTTCATTGGTTCCAACGGTGGCAGCTGCGGAATCCGCTATTGGGTTAGCCATTTTC  366193
+
+Query  241     GTTATTACTTTCCGAGTCCGAGGGACTATTGCTGTAGAATTTATTAATAGCATTCAAGGT  300
+               ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  366192  GTTATTACTTTCCGAGTCCGAGGGACTATTGCTGTAGAATTTATTAATAGCATTCAAGGT  366133
+
+Query  301     TAA  303
+               |||
+Sbjct  366132  TAA  366130
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 108077130
+
+
+  Database: watermelon.fsa
+    Posted date:  Feb 17, 2020  9:51 AM
+  Number of letters in database: 379,236
+  Number of sequences in database:  1
+
+
+
+Matrix: blastn matrix 1 -2
+Gap Penalties: Existence: 0, Extension: 2.5
+tres-l1:astrose:/storage/astrose/watermelon_files$ blastn -query watermelon_nt/nad4L.fasta -db watermelon.fsa|less
+tres-l1:astrose:/storage/astrose/watermelon_files$ #To keep output, redirect (>) to a file name
+tres-l1:astrose:/storage/astrose/watermelon_files$ #instead of making database, remove db and use -subject, blastn will do this, not the other blast commands
+tres-l1:astrose:/storage/astrose/watermelon_files$ #outfmt 6 will return tab delimited file, very easy for counting hits, see one hit to watermelon genome
+tres-l1:astrose:/storage/astrose/watermelon_files$ #blastn -query watermelon_nt/nad4L.fasta -subject  watermelon_nt/nad4L.fasta -outfmt 6 -evalue 1e-100|less
+tres-l1:astrose:/storage/astrose/watermelon_files$ 
