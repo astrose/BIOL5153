@@ -52,7 +52,8 @@ Investigating the spatio-temporal effects of increasing greenhouse gases and cli
 ---
 |  |  | 
 | -------- | -------- | 
-| 7/2019    | ***Scholar***, NEON/TERENO Carbon Workshop    | 
+| 08/2020    | ***Poster Presenter***, ESA, Title: "Phenotyping Rice Genotypes Using light and CO2 Response Curves"|
+|7/2019    | ***Scholar***, NEON/TERENO Carbon Workshop    | 
 |6/2019 |***Scholar***, NEON-ESA Early Career|
 |9/2016 – Present| ***Member***, Alumni Association|
 |5/2018 – 8/2018| ***Scholar***, C. Roy Adair Plant Pathology Scholarship for research|
