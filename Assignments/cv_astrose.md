@@ -2,11 +2,10 @@
 
 
 # <span style="color:navy">*AYANNA ST. ROSE*</span>
-:::info
+
 Department of Biology, University of Arkansas
 email: astrose@uark.edu
 web: stroseayanna.wixsite.com
-:::
 
 ---
 ### <span style="color:navy">Dissertation</span>
